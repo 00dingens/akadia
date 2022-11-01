@@ -1,0 +1,85 @@
+body {
+    font: 400 15px Roboto, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+}
+.jumbotron, #services, #neuigkeiten {
+    background-color: #e39706;
+    color: #fff;
+    font-family: Roboto, sans-serif;
+}
+.button {
+    background-color: #e39706;
+    color: #fff;
+    font-family: Roboto, sans-serif;
+    border-radius: 20px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    vertical-align: middle;
+}
+.content {
+    padding: 60px 50px;
+}
+img.big-logo {
+    width: 70vw;
+    margin-top: 60px;
+}
+img.sponsor {
+    width: 100%;
+}
+@media (max-width: 768px) {
+    img.sponsor {
+        width: 150px;
+    }
+}
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+}
+
+.navbar {
+    margin-bottom: 0;
+    background-color: #e39706;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Roboto, sans-serif;
+}
+.navbar li a, .navbar {
+    color: #fff !important;
+}
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #e39706 !important;
+    background-color: #fff !important;
+}
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
+footer {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #4d6a75;
+}
+footer h4 {
+    font-size: 26px;
+    margin-top: 26px;
+}
+footer li, footer .gefoerdert {
+    list-style: none;
+    line-height: 1.4;
+    margin-bottom: 6px;
+}
+.gefoerdert {
+    text-align: center;
+    line-height: 1.4;
+    margin-top: 26px;
+}
+footer ul {
+    padding: 0;
+}
