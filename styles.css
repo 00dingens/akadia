@@ -21,9 +21,10 @@ body {
 .content {
     padding: 60px 50px;
 }
-img.big-logo {
+.big-logo {
     width: 70vw;
     margin-top: 60px;
+    vertical-align: middle;
 }
 img.sponsor {
     width: 100%;

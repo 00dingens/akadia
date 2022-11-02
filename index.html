@@ -11,7 +11,13 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="styles.css">
   <style>
-
+    polygon.zoom {
+      transform: scale(1);
+      transition: transform 0.5s ease-in-out;
+    }
+    polygon.zoom:hover {
+      transform: scale(2);
+    }
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -38,7 +44,30 @@
 </nav>
 
 <div class="jumbotron text-center">
-  <img src="akadia-logo.png" class="big-logo">
+  <svg viewBox="-50 -50 400 194"
+       xmlns="http://www.w3.org/2000/svg"
+       width="100vw" style="margin:0 -50px -50px;z-index:100;overflow:visible">
+    <image href="akadia-logo.png" x="0" y="0" width="300" height="94"/>
+    <polygon id="hide-bg-image-triangles" points="0,0 100,0 80,93 0,93" style="fill:#e39706;"/>
+    <!-- center 46 50 -->
+    <g transform="translate(46,50)">
+      <a href="coaching.html">
+        <polygon id="dreieck1" class="zoom" points="2,-3 38.5,-17 2,-43.5" style="fill:#638590;"/>
+      </a>
+      <a href="karriere.html">
+        <polygon id="dreieck2" class="zoom" points="3,0.5  40,-14 31,34" style="fill:#7da1aa;"/>
+      </a>
+      <a href="dozentwerden.html">
+        <polygon id="dreieck3" class="zoom" points="0,3  28,36.5 -28,36.5" style="fill:#4d6a75;"/>
+      </a>
+      <a href="https://akadia-akademie.de/strategiegespraech-vereinbaren/">
+        <polygon id="dreieck4" class="zoom" points="-3,0.5 -32,34 -41,-13" style="fill:#93b4c2;"/>
+      </a>
+      <a href="index.html">
+        <polygon id="dreieck5" class="zoom" points="-2,-3 -39,-17 -2,-44" style="fill:#ffffff;"/>
+      </a>
+    </g>
+  </svg>
 </div>
 
 <!-- Container Sponsoren -->
@@ -108,7 +137,7 @@
   </div>
   <div class="gefoerdert">
     <p>gefördert durch Sachsen-Anhalt Digital Innovation im Projekt
-    "Digitalisierung und Teilautomatisierung der Heranführung an eine selbständige Tätigkeit nach SGB III"</p>
+      "Digitalisierung und Teilautomatisierung der Heranführung an eine selbständige Tätigkeit nach SGB III"</p>
     <p>Projektzeitraum 20.05.2021 -> 31.12.2021</p>
     <p>
       <img src="foerder.jpg">
