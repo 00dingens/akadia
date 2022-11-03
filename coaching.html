@@ -11,8 +11,136 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="styles.css">
   <style>
+    .slottt-machine-recipe {
+      margin: 0px auto;
+      width: 700px;
+      margin-top: 50px;
+    }
 
+    .slottt-machine-recipe__mask {
+      width: 100%;
+      height: 90px;
+      overflow: hidden;
+      position: relative;
+      display: inline-block;
+      margin-bottom: -40px;
+    }
+
+    .slottt-machine-recipe__items_container {
+      position: absolute;
+    }
+
+    .slottt-machine-recipe__item {
+      min-height: 150px;
+      max-height: 150px;
+      margin: 0px;
+      padding: 0px;
+      background-size: contain;
+    }
+    .item_wrapper {
+      position: relative;
+      display: inline-flex;
+    }
+
+    /* Typography */
+
+    body {
+      font-family: Helvetica, Arial, sans serif;
+      line-height: 1;
+    }
+
+    .recipe_if, .recipe_then {
+      font-weight: bold;
+      font-size: 70px;
+    }
+
+    .tagline {
+      font-weight: normal;
+      font-size: 24px;
+    }
+
+    a {
+      font-weight: bold;
+      text-decoration: none;
+      color: #33CCFF;
+    }
+    .num {
+      width: 200px;
+    }
+    .word {
+      width: 80%;
+    }
   </style>
+  <script>
+    // IFTTT Slottt Machine by Jen Hamon
+    // jen@ifttt.com
+    // github.com/jhamon
+    // Adapted from https://codepen.io/paulstone/pen/RRrQQB
+    var wordlist = [
+      ['Dr Watson', 1],
+      ['Peter Silie', 2],
+      ['Karla Kolumna', 3],
+      ['Anna Lampe', 4],
+      ['Gerd Ine', 5],
+      ['Jan Froh', 6],
+      ['Luis Tich', 7],
+    ]
+
+    function buildSlotItem(text) {
+      let num = $('<div>').addClass('num').text(text[1]);
+      let word = $('<div>').addClass('word').text(text[0]);
+      return $('<div>').addClass('slottt-machine-recipe__item').addClass('item_wrapper').append(num, word);
+    }
+
+    function buildSlotContents($container, wordlist) {
+      $items = wordlist.map(buildSlotItem);
+      console.log($items);
+      $container.append($items);
+    }
+
+    function popPushNItems($container, n) {
+      $children = $container.find('.slottt-machine-recipe__item');
+      $children.slice(0, n).insertAfter($children.last());
+
+      if (n === $children.length) {
+        popPushNItems($container, 1);
+      }
+    }
+
+    // After the slide animation is complete, we want to pop some items off
+    // the front of the container and push them onto the end. This is
+    // so the animation can slide upward infinitely without adding
+    // inifinte div elements inside the container.
+    function rotateContents($container, n) {
+      setTimeout(function () {
+        popPushNItems($container, n);
+        $container.css({top: 0});
+      }, 5000);
+    }
+
+    function randomSlotttIndex(max) {
+      var randIndex = (Math.random() * max | 0);
+      return (randIndex > wordlist.length - 2) ? randIndex : randomSlotttIndex(max);
+    }
+
+    function animate() {
+      var wordIndex = randomSlotttIndex(wordlist.length);
+      $wordbox.animate({top: -wordIndex * 150}, 500, 'swing', function () {
+        rotateContents($wordbox, wordIndex);
+      });
+    }
+
+    $(function () {
+      $wordbox = $('#wordbox .slottt-machine-recipe__items_container');
+      buildSlotContents($wordbox, wordlist);
+      buildSlotContents($wordbox, wordlist);
+      buildSlotContents($wordbox, wordlist);
+      buildSlotContents($wordbox, wordlist);
+
+      setInterval(animate, 3000);
+    });
+  </script>
+
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
@@ -37,59 +165,14 @@
   </div>
 </nav>
 
-<!--div class="jumbotron text-center">
-  <div class="spinner-view">
-    <div class="spinner-content">
-      <div>blau</div>
-      <div>blai</div>
-      <div>bla a</div>
-      <div>blae</div>
-      <div>bla o</div>
-      <div>blas</div>
-      <div>bla n</div>
-      <div>bla rr</div>
-      <div>bla t</div>
-      <div>bla d</div>
-      <div>bla</div>
-      <div>bla</div>
-    </div>
-  </div>
-  <img src="akadia-logo.png" class="big-logo">
-</div>
-
-<h2>Carousel</h2>
-<div id="myCarousel" class="vertical carousel slide text-center" data-ride="carousel">
-  <!- Indicators ->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-  </ol>
-
-  <!- Wrapper for slides ->
-  <div class="carousel-inner" role="listbox" #carouselSlideContainer>
-    <div class="item active">
-      <h4>
-        <i class="glyphicon"></i>
-      </h4>
-    </div>
-    <div class="item">
-      <h4>
-        "One word... WOW!!"<br>
-        <span style="font-style:normal;">John Doe, Salesman, Rep Inc</span></h4>
-    </div>
-    <div class="item">
-      <h4>
-        "Could I... BE any more happy with this company?"<br>
-        <span style="font-style:normal;">Chandler Bing, Actor, FriendsAlot</span>
-      </h4>
+<div class="jumbotron">
+  <div class="slottt-machine-recipe">
+    <div class="slottt-machine-recipe__mask" id="wordbox">
+      <div class="slottt-machine-recipe__items_container recipe_if">
+      </div>
     </div>
   </div>
 </div>
-
-<a href="#myCarousel" role="button" data-slide="next">
-  Weiter
-</a-->
 
 <!-- Container Sponsoren -->
 <div id="services" class="container-fluid content text-center">
@@ -158,7 +241,7 @@
   </div>
   <div class="gefoerdert">
     <p>gefördert durch Sachsen-Anhalt Digital Innovation im Projekt
-    "Digitalisierung und Teilautomatisierung der Heranführung an eine selbständige Tätigkeit nach SGB III"</p>
+      "Digitalisierung und Teilautomatisierung der Heranführung an eine selbständige Tätigkeit nach SGB III"</p>
     <p>Projektzeitraum 20.05.2021 -> 31.12.2021</p>
     <p>
       <img src="foerder.jpg">
