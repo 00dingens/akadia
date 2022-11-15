@@ -1,3 +1,19 @@
+/* from https://google-webfonts-helper.herokuapp.com/fonts/roboto?subsets=latin */
+/* roboto-regular - latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/roboto-v30-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+    url('fonts/roboto-v30-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('fonts/roboto-v30-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('fonts/roboto-v30-latin-regular.woff') format('woff'), /* Modern Browsers */
+    url('fonts/roboto-v30-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('fonts/roboto-v30-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+
+
 body {
     font: 400 15px Roboto, sans-serif;
     line-height: 1.8;
@@ -29,9 +45,9 @@ body {
 img.sponsor {
     width: 100%;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     img.sponsor {
-        width: 150px;
+        width: 160px;
     }
 }
 .thumbnail img {
