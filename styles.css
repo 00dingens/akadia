@@ -23,6 +23,7 @@ body {
     background-color: #e39706;
     color: #fff;
     font-family: Roboto, sans-serif;
+    border-radius: 0;
 }
 .button {
     background-color: #e39706;
