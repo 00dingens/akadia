@@ -7,12 +7,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
   <!-- Bootstrap dependencies -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <!-- General styles -->
   <link rel="stylesheet" href="styles.css">
   <!-- Page specific styles -->
   <style>
-
+    label {
+      width: 38%;
+    }
+    input {
+      width: 58%;
+    }
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -23,12 +29,37 @@
 </div>
 
 <div class="jumbotron text-center p-1 m-0">
-  <img src="img/Slide-2.jpg" class="d-block mx-auto" width="100%" alt="Akadia Akademie">
+  <img src="img/Slide-2.jpg" class="d-block mx-auto" width="30%" alt="Akadia Akademie">
+  <div class="text-center">
+    <a href="Flyer.pdf" download="Flyer.pdf">
+      <button class="mt-3 btn btn-dark">PDF Download</button>
+    </a>
+  </div>
 </div>
+
+<div class="jumbotron d-flex justify-content-center p-5 m-0">
+  <div class="text-left" style="width: 50%">
+    <form action="https://akadia-akademie.de/wp-json/contact-form-7/v1/contact-forms/1377/feedback"
+          method="post" target="dummyframe">
+      <label for="fname">Name:</label>
+      <input type="text" id="fname" name="ihr-name"><br><br>
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="ihre-email"><br><br>
+      <label for="title">Betreff:</label>
+      <input type="text" id="title" name="ihr-betreff"><br><br>
+      <label for="message">Nachricht:</label>
+      <textarea type="text" id="message" name="ihre-nachricht" cols="50" rows="5" style="width: 58%"></textarea><br>
+      <input type="hidden" style="display: none;" name="honeypot-618" value="">
+      <input type="hidden" style="display: none;" name="zustimmung-datenschutz" value="1">
+      <input type="hidden" style="display: none;" name="_wpcf7" value="1377"><br>
+      <input class="mt-3 btn btn-dark w-100" type="submit" value="Schick uns eine Nachricht">
+    </form>
+  </div>
+</div>
+<iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
 
 <!-- Inhalt: Download Button -> Flyer -->
 <!-- Inhalt: Kontaktformular -->
-
 
 
 <!-- Container Sponsoren -->
@@ -98,7 +129,7 @@
   </div>
   <div class="gefoerdert">
     <p>gefördert durch Sachsen-Anhalt Digital Innovation im Projekt
-    "Digitalisierung und Teilautomatisierung der Heranführung an eine selbständige Tätigkeit nach SGB III"</p>
+      "Digitalisierung und Teilautomatisierung der Heranführung an eine selbständige Tätigkeit nach SGB III"</p>
     <p>Projektzeitraum 20.05.2021 -> 31.12.2021</p>
     <p>
       <img src="foerder.jpg">
@@ -108,7 +139,11 @@
 
 <!-- Bootstrap scripts. See https://getbootstrap.com/docs/4.3/getting-started/introduction/#starter-template -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
 </html>
