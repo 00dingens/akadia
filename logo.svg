@@ -11,6 +11,7 @@
           font: 400 40px Roboto, sans-serif;
           fill: #0000;
           transition: fill 0.3s ease-in-out;
+          cursor: default;
         }
         text:has(+ a:hover) {
           fill: #000F;

@@ -25,6 +25,11 @@ body {
     font-family: Roboto, sans-serif;
     border-radius: 0;
 }
+object {
+    /*position:relative;
+    top:-50px;
+    display: inline-block;*/
+}
 .button {
     background-color: #e39706;
     color: #fff;
