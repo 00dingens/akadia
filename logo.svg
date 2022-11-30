@@ -34,11 +34,11 @@
     ]]></style>
     <g transform="translate(500,0)">
         <a href="index.html" target='_top'>
-            <image href="akadia-logo.png" x="0" y="0" width="300" height="94"/>
+            <image href="logo_w.png" x="0" y="0" width="300" height="94"/>
             <polygon id="hide-bg-image-triangles" points="0,0 100,0 80,93 0,93" style="fill:#e39706;"/>
         </a>
     </g>
-    <image href="akadia-logo.png" x="0" y="0" width="300" height="94"/>
+    <image href="logo_w.png" x="0" y="0" width="300" height="94"/>
     <polygon id="hide-bg-image-triangles" points="0,0 100,0 80,93 0,93" style="fill:#e39706;"/>
     <polygon id="hide-bg-image-text" points="100,0 80,93 300,93 300,0" style="fill:#e39706;"/>
     <!-- center 46 50 -->
