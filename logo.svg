@@ -1,7 +1,7 @@
 <svg viewBox="-50 -50 900 174" xmlns="http://www.w3.org/2000/svg">
     <style type="text/css"><![CDATA[
         polygon.zoom {
-          transform: scale(1);
+          transform: scale(1.5);
           transition: transform 0.3s ease-in-out;
         }
         polygon.zoom:hover {
@@ -19,8 +19,8 @@
         @keyframes wiggle {
             0% { transform: rotate(0deg); }
             2% { transform: rotate(0deg); }
-            4% { transform: rotate(5deg); }
-            6% { transform: rotate(-5deg);}
+            4% { transform: rotate(15deg); }
+            6% { transform: rotate(-15deg);}
             8% { transform: rotate(0deg); }
         }
 
