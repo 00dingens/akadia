@@ -31,19 +31,23 @@
     .selectedPiece {
       transform: scale(1.2);
     }
-
+    .standorte-bg {
+      background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(100, 100, 100, 0.7)), url("img/StandorteBG.jpeg") no-repeat center top;
+      height: 100%;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
     .spin {
       /*display: inline-block;*/
-
       transform: rotate(0deg);
       transition: ease-in-out;
       /*animation: spin 60s infinite;*/
-
       -webkit-transition: all 1s ease-in-out;
       -moz-transition: all 1s ease-in-out;
       -o-transition: all 1s ease-in-out;
       transition: all 1s ease-in-out;
-
     }
   </style>
   <script>
@@ -115,8 +119,8 @@
 
 <!-- Inhalt: Glücksrad mit Standorten -->
 
-<div class="text-center pb-3" style="background: #e39706; font-size:4rem">Standorte</div>
-<div style="background: #e39706;" class="row px-5 pb-5">
+<div class="row standorte-bg px-5 pb-5">
+  <div class="text-center col-12 pb-3" style="font-size:4rem">Standorte</div>
   <svg id="spinwheel"
        style="max-height: 50vh"
        class="col-12 col-sm-12 col-md-8 col-lg-6"
@@ -131,7 +135,7 @@
         </g>
         <g id="piece17" class="piece" transform="rotate( 20)">
           <polygon onclick="top.animate(17)" points="0,0 -100,-18 -100,18" style="fill:#4d6a75;"/>
-          <text onclick="top.animate(17)" class="so" x="-96" y="4">POTZDAM</text>
+          <text onclick="top.animate(17)" class="so" x="-96" y="4">POTSDAM</text>
         </g>
         <g id="piece16" class="piece" transform="rotate( 40)">
           <polygon onclick="top.animate(16)" points="0,0 -100,-18 -100,18" style="fill:#93b4c2;"/>
@@ -168,7 +172,7 @@
         </g>
         <g transform="rotate(200)">
           <polygon onclick="top.animate(8)" points="0,0 -100,-18 -100,18" style="fill:#93b4c2;"/>
-          <text onclick="top.animate(8)" class="so" x="-96" y="4" style="font-size: 10px">WERNIGERDOE</text>
+          <text onclick="top.animate(8)" class="so" x="-96" y="4" style="font-size: 10px">WERNIGERODE</text>
         </g>
         <g transform="rotate(220)">
           <polygon onclick="top.animate(7)" points="0,0 -100,-18 -100,18" style="fill:#638590;"/>
@@ -242,7 +246,7 @@
       <div id="text7short">Clara-Zetkin-Straße 28, 07545 Gera</div>
     </div>
     <div id="text8" class="infotext pt-3">
-      <h1>WERNIGERDOE</h1>
+      <h1>WERNIGERODE</h1>
       <div id="text8short">Im langen Schlage22A, 38855 Wernigerode</div>
     </div>
     <div id="text9" class="infotext pt-3">
@@ -278,7 +282,7 @@
       <div id="text16short">Heinz-Fangmann-Straße 2, 42287 Wuppertal</div>
     </div>
     <div id="text17" class="infotext pt-3">
-      <h1>POTZDAM</h1>
+      <h1>POTSDAM</h1>
       <div id="text17short">Luzernstraße 4, 14469 Potzdam</div>
     </div>
     <div id="text18" class="infotext pt-3">
@@ -289,7 +293,7 @@
 </div>
 
 <!-- Container Sponsoren -->
-<div id="services" class="container-fluid content text-center">
+<div id="services" class="container-fluid orange content text-center">
   <div class="row justify-content-center">
     <div class="col col-md-2 col-md-offset-1 px-2 pt-2 pt-md-0">
       <a href="https://www.bvmw.de/" target="_blank">
