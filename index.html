@@ -12,18 +12,25 @@
   <link rel="stylesheet" href="styles.css">
   <!-- Page specific styles -->
   <style>
-
+    .carousel-item {
+      width: 100%;
+    }
+    .slide-image {
+      object-fit: contain;
+      max-height:70vh;
+      width:100vw;
+    }
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
 <!-- Header Bar -->
-<div class="jumbotron text-center p-0 m-0">
-  <object data="logo.svg" width="100%" style="z-index:100;overflow:visible"></object>
+<div class="jumbotron orange text-center p-0 m-0">
+  <object data="logo.svg" width="100%" class="header-object"></object>
 </div>
 
-<div class="jumbotron text-center p-1 p-lg-3 p-xl-5 m-0">
-  <div id="carouselExampleIndicators" class="carousel slide"
+<div class="jumbotron text-center p-0 px-1 px-lg-3 px-xl-5 m-0">
+  <div class="carousel slide"
        data-ride="carousel" data-pause="false">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -35,27 +42,27 @@
     <div class="carousel-inner text-center">
       <div class="carousel-item text-center active">
         <a href="akadia.html">
-          <img src="img/Slide-1.jpg" class="d-block mx-auto" width="100%" alt="Akadia Akademie">
+          <img src="img/Slide-1.jpg" class="d-block px-auto slide-image" alt="Akadia Akademie">
         </a>
       </div>
       <div class="carousel-item">
         <a href="existenz.html">
-          <img src="img/Slide-2.jpg" class="d-block mx-auto" width="100%" alt="Existenzgründung">
+          <img src="img/Slide-2.jpg" class="d-block mx-auto slide-image" alt="Existenzgründung">
         </a>
       </div>
       <div class="carousel-item">
         <a href="karriere.html">
-          <img src="img/Slide-3.jpg" class="d-block mx-auto" width="100%" alt="Karriere">
+          <img src="img/Slide-3.jpg" class="d-block mx-auto slide-image" alt="Karriere">
         </a>
       </div>
       <div class="carousel-item">
         <a href="standorte.html">
-          <img src="img/Slide-4.jpg" class="d-block mx-auto" width="100%" alt="Standorte">
+          <img src="img/Slide-4.jpg" class="d-block mx-auto slide-image" alt="Standorte">
         </a>
       </div>
       <div class="carousel-item">
         <a href="dozenten.html">
-          <img src="img/Slide-5.jpg" class="d-block mx-auto" width="100%" alt="Dozenten">
+          <img src="img/Slide-5.jpg" class="d-block mx-auto slide-image" alt="Dozenten">
         </a>
       </div>
     </div>

@@ -20,12 +20,17 @@ body {
     color: #818181;
 }
 .jumbotron, #services, #neuigkeiten {
-    background-color: #e39706;
-    color: #fff;
     font-family: Roboto, sans-serif;
     border-radius: 0;
 }
-object {
+.orange {
+    background-color: #e39706;
+    color: #fff;
+}
+.header-object {
+    z-index:100;
+    overflow:visible;
+    max-height:30vh
     /*position:relative;
     top:-50px;
     display: inline-block;*/
